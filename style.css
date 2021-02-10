@@ -1,3 +1,70 @@
+
+.button {
+  font-size: $buttonSize;
+  position: relative;
+  border: 1px solid $playColor;
+  height: 1em;
+  width: 1em;
+  padding: .25em;
+  border-radius: 50%;
+  transition: all $speed ease;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: .25em;
+  left: .5em;
+  transition: all $speed ease;
+  border:.5em solid transparent;
+  border-right-width: 0;
+  height: 0;
+  width: 0;
+}
+
+.button:hover {
+  border-color: $playColor-hover;
+}
+
+
+.play:before {
+  border-left: .75em solid $playColor;
+}
+.play:hover:before {
+  border-left-color: $playColor-hover;
+}
+
+.paused {
+  border-radius: 5%;
+  border-color: $pauseColor;
+}
+.paused:before {
+  border-width:0;
+  border-left: .4em solid $pauseColor;
+  border-right:.4em solid $pauseColor;
+  height: 1em;
+  width: .2em;
+  left: .25em;
+          }
+.paused:hover {
+  border-color: $pauseColor-hover;
+}
+.paused:hover:before {
+  border-left-color: $pauseColor-hover;
+  border-right-color: $pauseColor-hover;
+}
+
+
+/*  Just for presentation */
+.button {
+  margin: 40px auto;
+}
+
+
+
+
+
+
 *{
   /* apply to the whole website */
   margin: 0;
@@ -180,69 +247,6 @@ a { color: inherit; }
   
 }
 
-
-
-
-.button {
-  font-size: $buttonSize;
-  position: relative;
-  border: 1px solid $playColor;
-  height: 1em;
-  width: 1em;
-  padding: .25em;
-  border-radius: 50%;
-  transition: all $speed ease;
-}
-
-.button:before {
-  content: "";
-  position: absolute;
-  top: .25em;
-  left: .5em;
-  transition: all $speed ease;
-  border:.5em solid transparent;
-  border-right-width: 0;
-  height: 0;
-  width: 0;
-}
-
-.button:hover {
-  border-color: $playColor-hover;
-}
-
-
-.play:before {
-  border-left: .75em solid $playColor;
-}
-.play:hover:before {
-  border-left-color: $playColor-hover;
-}
-
-.paused {
-  border-radius: 5%;
-  border-color: $pauseColor;
-}
-.paused:before {
-  border-width:0;
-  border-left: .4em solid $pauseColor;
-  border-right:.4em solid $pauseColor;
-  height: 1em;
-  width: .2em;
-  left: .25em;
-          }
-.paused:hover {
-  border-color: $pauseColor-hover;
-}
-.paused:hover:before {
-  border-left-color: $pauseColor-hover;
-  border-right-color: $pauseColor-hover;
-}
-
-
-/*  Just for presentation */
-.button {
-  margin: 40px auto;
-}
 
 
 
