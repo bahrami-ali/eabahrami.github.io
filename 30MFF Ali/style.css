@@ -1,0 +1,252 @@
+*{
+  /* apply to the whole website */
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  text-decoration: none;
+  
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* create a gap from the fixed nav bar to the section area when use the nav bar to jump to the section area */
+:target::before{
+    content: "";
+    display: block;
+    height: 50px;
+    margin: -10px 0 0;
+}
+
+/* background */
+.container{
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+/* nav bar */
+.nav{
+  overflow: hidden;
+  top:0;
+  font-size: 50px;
+  width: 100%;
+  height: 120px;
+  position:fixed;
+  background: #5c5c5c;
+  color: white;
+  border: 1px solid grey;
+  z-index: 10;
+}
+/* keep the color of the menu text the same when click */
+a { color: inherit; }
+
+/* logo */
+.logo{
+  margin: 35px;
+  left: 70;
+  position: absolute;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  float: left;
+}
+
+/* menu */
+.menu ul{
+  /* makes the container behaves like an inline element */
+  display: inline-flex;
+  margin: 50px;
+  right: 50;
+  position: absolute;
+  font-size: 0.4em;
+  float: right;
+}
+.menu ul li{
+  list-style: none;
+  /* the space between each elements is 50 px */
+  margin: 0 50px;
+  color: #000000;
+  cursor: pointer;
+  text-decoration:none;
+}
+
+
+#videoContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+  margin-top: 100px;
+}
+
+#video {
+  width: 100%;
+}
+
+
+
+
+
+.block {
+  height: 60%;
+  margin: auto;
+  width: 70%;
+}
+
+
+
+
+.crewImageContainer {
+  width: 30%;
+  margin: 30px;
+}
+
+.crewImage {
+  width: 100%;
+}
+
+.crewImages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.crewInfo {
+  display: none;
+}
+.name {
+  font-size: 24px;
+}
+
+.major {
+  font-size: 21px;
+}
+
+.class {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 620px) {
+  .crewImages {
+    display: block;
+    text-align: center;
+  }
+
+  .crewImageContainer {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+
+.crew_header{
+  font-size: 2em;
+  padding: 0 0 50 0px;
+  margin: 100 100 auto auto;
+}
+
+
+
+
+
+/* about page */
+.about{
+  position:relative;
+  padding-top: 5%;
+  width: 100%;
+  height: 100%;
+  
+  overflow: hidden;
+}
+.about_elements{
+  margin: 100 200 auto 200;
+  position: relative;
+  font-size: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about_text {
+  /* display: inline-block; */
+  flex: 45%;
+  float: right;
+  line-height: 30px;
+}
+.about_header{
+  font-size: 2em;
+  padding: 0 0 50 0px;
+  
+}
+
+
+
+
+.button {
+  font-size: $buttonSize;
+  position: relative;
+  border: 1px solid $playColor;
+  height: 1em;
+  width: 1em;
+  padding: .25em;
+  border-radius: 50%;
+  transition: all $speed ease;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: .25em;
+  left: .5em;
+  transition: all $speed ease;
+  border:.5em solid transparent;
+  border-right-width: 0;
+  height: 0;
+  width: 0;
+}
+
+.button:hover {
+  border-color: $playColor-hover;
+}
+
+
+.play:before {
+  border-left: .75em solid $playColor;
+}
+.play:hover:before {
+  border-left-color: $playColor-hover;
+}
+
+.paused {
+  border-radius: 5%;
+  border-color: $pauseColor;
+}
+.paused:before {
+  border-width:0;
+  border-left: .4em solid $pauseColor;
+  border-right:.4em solid $pauseColor;
+  height: 1em;
+  width: .2em;
+  left: .25em;
+          }
+.paused:hover {
+  border-color: $pauseColor-hover;
+}
+.paused:hover:before {
+  border-left-color: $pauseColor-hover;
+  border-right-color: $pauseColor-hover;
+}
+
+
+/*  Just for presentation */
+.button {
+  margin: 40px auto;
+}
+
+
+
+
+
+
+
