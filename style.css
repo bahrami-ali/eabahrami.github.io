@@ -35,7 +35,7 @@ h2 {
 
 .logo:hover {
   
-  color:slateblue;
+  color:lightskyblue;
 }
 
 /* BASIC SETUP */
@@ -93,7 +93,7 @@ h2 {
 
 
 .nav-item a:hover {
-  color: slateblue;
+  color: lightskyblue;
 }
 
 /* SECTIONS */
@@ -102,7 +102,7 @@ h2 {
   width: 100%;
   min-height: 70vh;
 
-  background:slateblue;
+  background:rgb(37, 37, 37);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@ h2 {
 }
 
 .headline h1,p{
-  color: white;
+  
   text-align: left;
   line-height: 1.4;
   margin: 10px 50px 10px 50px;
@@ -159,10 +159,11 @@ h2 {
 
 
 #biggif {
-  max-width: 260px;
+  max-width: 280px;
   height: auto;
   margin-bottom: 34px;
   margin-top: 34px;
+  margin: auto;
 }
 
 
@@ -205,7 +206,41 @@ h2 {
   .feature-container {
     margin-top: 20px;
   }
-  
-  
-  
+}
+
+
+/* Typwriter  */
+
+.var-highlight{
+	color: orange;
+}
+.string-highlight{
+	color: lightskyblue;
+}
+
+#typewriter{
+		/* font-size: 2em; */
+    color: white;
+		margin: 0;
+		font-family: "Courier New";
+
+		&:after{
+			content: "|";
+			animation: blink 500ms linear infinite alternate;
+		}
+}
+
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
 }
